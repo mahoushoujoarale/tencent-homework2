@@ -28,7 +28,7 @@ export default function EditPane() {
         checkbox.push(item.value);
       }
     }
-    store.addData({
+    store.setData({
       checkbox: checkbox,
       select: form.select.value,
       slide: form.slide.value,

@@ -1,23 +1,12 @@
 .App {
-  text-align: center;
-}
+  position: relative;
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
+  .main {
+    display: flex;
+    justify-content: space-around;
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App {
-  display: flex;
-  justify-content: center;
-
-  &> :first-child {
-    border-right: 1px dashed black;
+    &> :first-child {
+      border-right: 1px dashed black;
+    }
   }
 }

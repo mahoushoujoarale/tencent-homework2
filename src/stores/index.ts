@@ -10,6 +10,7 @@ interface Data {
 
 const store = observable({
   show: false,
+  showMessage: false,
   data: {
     checkbox: [] as string[],
     select: "",
@@ -17,9 +18,16 @@ const store = observable({
     input: "",
     switch: false,
   },
-  addData: (val: Data) => {
-    store.data = val;
+  setShow: () => {
     store.show = true;
+    store.showMessage = false;
+  },
+  setData: (val: Data) => {
+    store.data = val;
+    store.showMessage = true;
+    setTimeout(() => {
+      store.setShow();
+    }, 2000);
   },
 });
 export default store;
